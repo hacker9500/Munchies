@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.munchies.abhishek.munchies.buy_coupon">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/android_material_design_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Coupon Type"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="10dp" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/android_material_design_spinner_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Payment Type"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal"
+            android:layout_below="@+id/android_material_design_spinner"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:hint="Number of Coupons"
+            android:id="@+id/editText"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:id="@+id/button"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
