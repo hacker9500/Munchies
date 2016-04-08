@@ -48,7 +48,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/breakfast"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -66,6 +66,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
+                        android:id="@+id/breakfast_share"
                         android:layout_margin="2dp"
                         ></Button>
                 </RelativeLayout>
@@ -79,11 +80,11 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/progressBar"
+                        android:id="@+id/breakfast_left"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="17dp"
-                        android:layout_above="@+id/textView2"
+                        android:layout_above="@+id/breakfast_text"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp" />
 
@@ -92,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="12/20"
-                        android:id="@+id/textView2"
+                        android:id="@+id/breakfast_text"
                         android:textAlignment="center"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true" />
@@ -118,7 +119,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_breakfast"
+                android:id="@+id/card_lunch"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -138,7 +139,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Lunch"
-                        android:id="@+id/mealType"
+                        android:id="@+id/lunch"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -157,6 +158,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_margin="2dp"
+                        android:id="@+id/lunch_share"
                         ></Button>
                 </RelativeLayout>
                 <RelativeLayout
@@ -169,11 +171,11 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/progressBar"
+                        android:id="@+id/lunch_left"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="17dp"
-                        android:layout_above="@+id/textView2"
+                        android:layout_above="@+id/lunch_text"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp" />
 
@@ -182,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="12/20"
-                        android:id="@+id/textView2"
+                        android:id="@+id/lunch_text"
                         android:textAlignment="center"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true" />
@@ -208,7 +210,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_breakfast"
+                android:id="@+id/card_snacks"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -228,7 +230,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Evening Snack"
-                        android:id="@+id/mealType"
+                        android:id="@+id/snacks"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -247,6 +249,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_margin="2dp"
+                        android:id="@+id/snacks_share"
                         ></Button>
                 </RelativeLayout>
                 <RelativeLayout
@@ -259,11 +262,11 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/progressBar"
+                        android:id="@+id/snacks_left"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="17dp"
-                        android:layout_above="@+id/textView2"
+                        android:layout_above="@+id/snacks_text"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp" />
 
@@ -272,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="12/20"
-                        android:id="@+id/textView2"
+                        android:id="@+id/snacks_text"
                         android:textAlignment="center"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true" />
@@ -298,7 +301,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_breakfast"
+                android:id="@+id/card_dinner"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -318,7 +321,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Dinner"
-                        android:id="@+id/mealType"
+                        android:id="@+id/dinner"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -337,6 +340,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_margin="2dp"
+                        android:id="@+id/dinner_share"
                         ></Button>
                 </RelativeLayout>
                 <RelativeLayout
@@ -349,11 +353,11 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/progressBar"
+                        android:id="@+id/dinner_left"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="17dp"
-                        android:layout_above="@+id/textView2"
+                        android:layout_above="@+id/dinner_text"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp" />
 
@@ -362,7 +366,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="12/20"
-                        android:id="@+id/textView2"
+                        android:id="@+id/dinner_text"
                         android:textAlignment="center"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true" />

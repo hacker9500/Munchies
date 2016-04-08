@@ -69,16 +69,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Having  "
-                    android:id="@+id/switch2"
+                    android:id="@+id/card8_vote"
                     android:checked="true"
-                    android:layout_above="@+id/ratingBar"
+                    android:layout_above="@+id/card8_rating"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="23dp" />
 
                 <RatingBar
                     android:layout_width="240dp"
                     android:layout_height="40dp"
-                    android:id="@+id/ratingBar"
+                    android:id="@+id/card8_rating"
                     android:clickable="true"
                     android:layout_marginBottom="32dp"
                     android:layout_alignParentBottom="true"
@@ -94,7 +94,7 @@
                     android:shadowColor="#969494"
                     android:textSize="35sp"
                     android:layout_marginBottom="25dp"
-                    android:layout_above="@+id/switch2"
+                    android:layout_above="@+id/card8_vote"
                     android:layout_centerHorizontal="true" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>

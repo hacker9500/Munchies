@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-            android:id="@+id/android_material_design_spinner"
+            android:id="@+id/week"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Select Coupon Type"
@@ -22,13 +22,13 @@
             android:layout_marginLeft="10dp" />
 
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-            android:id="@+id/android_material_design_spinner_2"
+            android:id="@+id/meal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Select Payment Type"
             android:textColorHint="#05ab9a"
             app:met_floatingLabel="normal"
-            android:layout_below="@+id/android_material_design_spinner"
+            android:layout_below="@+id/week"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp" />
@@ -39,7 +39,7 @@
             android:inputType="numberSigned"
             android:ems="10"
             android:hint="Number of Coupons"
-            android:id="@+id/editText"
+            android:id="@+id/count"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buy"
-            android:id="@+id/button"
-            android:layout_below="@+id/editText"
+            android:id="@+id/buy"
+            android:layout_below="@+id/count"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="39dp" />
 

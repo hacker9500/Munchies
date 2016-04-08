@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Abhishek Kumar"
-                    android:id="@+id/textView4"
+                    android:id="@+id/itemName"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
@@ -42,17 +42,17 @@
                 <RatingBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar2"
-                    android:layout_below="@+id/textView4"
+                    android:id="@+id/rating"
+                    android:layout_below="@+id/itemName"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp" />
 
                 <ImageView
                     android:layout_width="250dp"
                     android:layout_height="250dp"
-                    android:id="@+id/imageView2"
+                    android:id="@+id/image"
                     android:scaleType="centerCrop"
-                    android:layout_below="@+id/ratingBar2"
+                    android:layout_below="@+id/rating"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:src="@mipmap/ic_prof"/>
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Back"
-                    android:id="@+id/button2"
+                    android:id="@+id/back"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp" />

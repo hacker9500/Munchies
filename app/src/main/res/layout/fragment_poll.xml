@@ -2,7 +2,9 @@
 
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poll"
+    >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -27,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="45dp"
+        android:id="@+id/card1"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -37,7 +40,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view1"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -57,7 +60,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card1_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -76,7 +79,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card1_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -89,16 +92,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card1_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card1_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card1_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -109,12 +112,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card1_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card1_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -127,6 +130,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card2"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -137,7 +141,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view2"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -157,7 +161,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card2_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -176,7 +180,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card2_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -189,16 +193,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card2_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card2_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card2_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -209,12 +213,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card2_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card2_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -227,6 +231,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card3"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -257,7 +262,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card3_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -276,7 +281,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card3_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -289,16 +294,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card3_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card3_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card3_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -309,12 +314,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card3_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card3_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -327,6 +332,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card4"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -337,7 +343,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view4"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -357,7 +363,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card4_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -376,7 +382,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card4_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -389,16 +395,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card4_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card4_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card4_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -409,12 +415,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card4_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card4_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -427,6 +433,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card5"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -437,7 +444,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view5"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -457,7 +464,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card5_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -476,7 +483,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card5_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -489,16 +496,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card5_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card5_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card5_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -509,12 +516,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card5_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card5_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -527,6 +534,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card6"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -537,7 +545,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view6"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -557,7 +565,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card6_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -576,7 +584,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card6_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -589,16 +597,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card6_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card6_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card6_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -609,12 +617,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card6_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card6_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -627,6 +635,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card7"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -637,7 +646,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view7"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -657,7 +666,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card7_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -676,7 +685,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card7_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -689,16 +698,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card7_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card7_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card7_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -709,12 +718,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card7_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card7_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -727,6 +736,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
+        android:id="@+id/card8"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -737,7 +747,7 @@
             <!-- A CardView that contains a TextView -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+                android:id="@+id/card_view8"
                 android:layout_gravity="center"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
@@ -757,7 +767,7 @@
                         android:textColor="@color/cardTextHead"
                         android:textSize="20sp"
                         android:text="Breakfast"
-                        android:id="@+id/mealType"
+                        android:id="@+id/card8_meal"
                         android:layout_gravity="center_vertical"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
@@ -776,7 +786,7 @@
                         android:layout_alignParentBottom="false"
                         android:background="@color/cardHead"
                         android:layout_marginRight="2dp"
-                        ></Button>
+                        android:id="@+id/card8_menu"></Button>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -789,16 +799,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Having  "
-                        android:id="@+id/switch2"
+                        android:id="@+id/card8_vote"
                         android:checked="true"
-                        android:layout_above="@+id/ratingBar"
+                        android:layout_above="@+id/card8_rating"
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="23dp" />
 
                     <RatingBar
                         android:layout_width="240dp"
                         android:layout_height="40dp"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/card8_rating"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"
                         android:layout_alignParentBottom="true"
@@ -809,12 +819,12 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="12 : 12 : 12"
-                        android:id="@+id/textView3"
+                        android:id="@+id/card8_timer"
                         android:textColor="@color/cardHead"
                         android:shadowColor="#969494"
                         android:textSize="35sp"
                         android:layout_marginBottom="25dp"
-                        android:layout_above="@+id/switch2"
+                        android:layout_above="@+id/card8_vote"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>

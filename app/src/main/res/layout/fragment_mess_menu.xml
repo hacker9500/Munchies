@@ -35,6 +35,23 @@
             android:layout_below="@+id/day_selector"
             android:layout_alignEnd="@+id/day_selector" />
 
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuList"
+            android:layout_centerHorizontal="true"
+            android:elevation="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/ratingBar" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_below="@+id/meal_selector"
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>
