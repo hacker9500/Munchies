@@ -63,8 +63,16 @@ public class canteenMenu extends Fragment implements View.OnClickListener{
                 Toast.makeText(getContext(), "Please select items first", Toast.LENGTH_SHORT).show();
             }
             else{
-                Toast.makeText(getContext(), "Purshase made of Rs."+String.valueOf(total)+"/-",Toast.LENGTH_SHORT).show();
-                order.submit();
+                //Toast.makeText(getContext(), "Purshase made of Rs."+String.valueOf(total)+"/-",Toast.LENGTH_SHORT).show();
+                String status = order.submit();
+                if(status != null){
+                    if(status == "404"){
+                        Toast.makeText(getContext(), "User not found !!!",Toast.LENGTH_SHORT).show();
+                    }
+                    else if( status == "306"){
+                        Toast.makeText(getContext(), "your previous ordr is not yet completed", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 total = 0;
             }
         }

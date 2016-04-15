@@ -9,4 +9,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.munchies.abhishek.munchies.LoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MUNCHIES"
+        android:id="@+id/textView2"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/signIn"
+        android:background="@color/google"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/imageView2"
+        android:src="@drawable/login_google"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

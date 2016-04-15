@@ -83,7 +83,7 @@ public class couponFragment extends Fragment implements View.OnClickListener{
         dinner_share.setOnClickListener(this);
 
         try {
-            new Import1().execute("http://192.168.2.0:4000/couponLeft/shubham14100@iiitd.ac.in").get();
+            new Import1().execute("http://192.168.2.0:4000/couponLeft/"+MainActivity.email).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -108,7 +108,7 @@ public class couponFragment extends Fragment implements View.OnClickListener{
                 EditText email,count;
                 email = (EditText) vi.findViewById(R.id.email);
                 count = (EditText) vi.findViewById(R.id.count);
-                String str = "http://192.168.2.0:4000/couponLeft/share/shubham14100@iiitd.ac.in/"+email.getText().toString()+"/"+me+"/"+count.getText().toString();
+                String str = "http://192.168.2.0:4000/couponLeft/share/"+MainActivity.email+"/"+email.getText().toString()+"/"+me+"/"+count.getText().toString();
                 String result = "fail";
                 try {
                     result = new Import().execute(str).get();

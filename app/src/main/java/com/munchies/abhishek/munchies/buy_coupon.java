@@ -93,7 +93,7 @@ public class buy_coupon extends Fragment implements AdapterView.OnItemClickListe
                 Toast.makeText(getContext(),"Please fill the fields correctly",Toast.LENGTH_SHORT).show();
             }
             else{
-                String st = "http://192.168.2.0:4000/buyCoupon/shubham14100@iiitd.ac.in/" + meal.getText().toString().toLowerCase()+"/"+count.getText().toString();
+                String st = "http://192.168.2.0:4000/buyCoupon/"+MainActivity.email+"/" + meal.getText().toString().toLowerCase()+"/"+count.getText().toString();
                 Log.i("true", st);
                 try {
                     st = new Import().execute(st).get();
