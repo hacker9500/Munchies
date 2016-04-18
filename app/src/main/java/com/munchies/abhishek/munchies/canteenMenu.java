@@ -1,6 +1,7 @@
 package com.munchies.abhishek.munchies;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,17 +65,50 @@ public class canteenMenu extends Fragment implements View.OnClickListener{
                 Toast.makeText(getContext(), "Please select items first", Toast.LENGTH_SHORT).show();
             }
             else{
-                //Toast.makeText(getContext(), "Purshase made of Rs."+String.valueOf(total)+"/-",Toast.LENGTH_SHORT).show();
-                String status = order.submit();
-                if(status != null){
-                    if(status == "404"){
-                        Toast.makeText(getContext(), "User not found !!!",Toast.LENGTH_SHORT).show();
+
+                final View vi = getActivity().getLayoutInflater().inflate(R.layout.aproove_order,null);
+                final RadioButton cash, paytm, room, haveit;
+                final Button checkout, cancel;
+                cash = (RadioButton) vi.findViewById(R.id.cash);
+                paytm = (RadioButton) vi.findViewById(R.id.paytm);
+                room = (RadioButton) vi.findViewById(R.id.roomDelivery);
+                haveit = (RadioButton) vi.findViewById(R.id.haveIt);
+                checkout = (Button) vi.findViewById(R.id.checkout);
+                cancel = (Button) vi.findViewById(R.id.cancel);
+                AlertDialog.Builder bui = new AlertDialog.Builder(getActivity());
+                final AlertDialog buii = bui.setView(vi).show();
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        order = new Order();
+                        total = 0;
+                        buii.dismiss();
                     }
-                    else if( status == "306"){
-                        Toast.makeText(getContext(), "your previous ordr is not yet completed", Toast.LENGTH_SHORT).show();
+                });
+                checkout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        order.delivery = (room.isChecked()) ? true : false;
+                        order.paymentMode = (cash.isChecked()) ? true : false;
+                        buii.dismiss();
+
+                        String status = order.submit();
+                        order = new Order();
+                        total = 0;
+                        if(status != null){
+                            if(status == "404"){
+                                Toast.makeText(getContext(), "User not found !!!",Toast.LENGTH_SHORT).show();
+                            }
+                            else if( status == "306"){
+                                Toast.makeText(getContext(), "your previous ordr is not yet completed", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(getContext(), "Purshase made of Rs."+String.valueOf(total)+"/-",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        total = 0;
                     }
-                }
-                total = 0;
+                });
             }
         }
     }

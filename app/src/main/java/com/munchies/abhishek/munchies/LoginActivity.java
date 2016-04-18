@@ -1,5 +1,6 @@
 package com.munchies.abhishek.munchies;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.accounts.AccountManager;
@@ -65,12 +66,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         signIn = (ImageButton) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);
         act = this;
         signIn.setBackgroundResource(R.drawable.login_google);
         signIn.setAdjustViewBounds(true);
+
+        SharedPreferences sp = getApplication().getSharedPreferences("com.munchies.abhishek", Context.MODE_PRIVATE);
+        if(sp.getBoolean("login", false) == true){
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            i.putExtra("name", sp.getString("name", "Shubham Goswami"));
+            i.putExtra("email", sp.getString("email", "shubham14100@iiitd.ac.in"));
+            i.putExtra("dpPath", sp.getString("dpPath", "https://lh4.googleusercontent.com/-f_BKM9EgYz8/AAAAAAAAAAI/AAAAAAAAC5g/EgAeeDNbnbw/photo.jpg"));
+            startActivity(i);
+
+        }
     }
 
     @Override
@@ -92,6 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Log.d("acount", accountName);
 
             new getAuthToken().execute();
+
         }
     }
 
@@ -184,13 +195,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     connect1.setDoInput(true);
                     connect1.setDoOutput(true);
                     //connect.connect();
-                    OutputStream os = connect.getOutputStream();
+                    OutputStream os = connect1.getOutputStream();
                     OutputStreamWriter ow = new OutputStreamWriter(os);
                     ow.write(json.toString());
                     ow.flush();
                     ow.close();
 
-                    InputStream in1 = connect.getInputStream();
+                    InputStream in1 = connect1.getInputStream();
                     InputStreamReader ir1 = new InputStreamReader(in1);
                     String str1 = "";
                     data = ir1.read();
@@ -201,7 +212,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                     name = json.getString("name");
                     email = json.getString("email");
-                    dpPath = json.getString("pictture");
+                    dpPath = json.getString("picture");
+                    Log.d("logInfo", json.toString());
+
+                    SharedPreferences sp = getApplication().getSharedPreferences("com.munchies.abhishek", Context.MODE_PRIVATE);
+                    sp.edit().putString("email",email);
+                    sp.edit().putString("name", name);
+                    sp.edit().putString("dpPath", dpPath);
+                    sp.edit().putBoolean("login", true);
+
+                    Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                    i.putExtra("name",name);
+                    i.putExtra("email", email);
+                    i.putExtra("dpPath", dpPath);
+                    startActivity(i);
+
 
                     return str1;
 
